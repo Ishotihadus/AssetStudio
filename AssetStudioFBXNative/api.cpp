@@ -148,6 +148,7 @@ AS_API(bool32_t) AsFbxInitializeContext(AsFbxContext* pContext, const char* pFil
 	}
 
 	auto pBindPose = FbxPose::Create(pScene, "BindPose");
+	pBindPose->SetIsBindPose(true);
 	pContext->pBindPose = pBindPose;
 
 	pScene->AddPose(pBindPose);
